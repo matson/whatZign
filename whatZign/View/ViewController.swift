@@ -67,21 +67,21 @@ class ViewController: UIViewController {
         let aqRange1 = 20...31
         let aqRange2 = 1...18
         
-        //refactor this. 
-        if(month == 12 && capRange1.contains(day!) ){
+        //refactor this.
+        if(month == 12 && capRange1.contains(day!) || month == 1 && capRange2.contains(day!) ){
             sign = "Capricorn"
             print(sign)
         }
-        else if(month == 1 && capRange2.contains(day!)){
-            sign = "Capricorn"
-            print(sign)
-        }else if(month == 1 && aqRange1.contains(day!)){
-            sign = "Aquarius"
-            print(sign)
-        }else if(month == 2 && aqRange2.contains(day!)){
-            sign = "Aquarius"
-            print(sign)
-        }
+////        else if(month == 1 && capRange2.contains(day!)){
+////            sign = "Capricorn"
+////            print(sign)
+//        }else if(month == 1 && aqRange1.contains(day!)){
+//            sign = "Aquarius"
+//            print(sign)
+//        }else if(month == 2 && aqRange2.contains(day!)){
+//            sign = "Aquarius"
+//            print(sign)
+//        }
         
         
  
