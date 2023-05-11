@@ -35,6 +35,9 @@ class ResultViewController: UIViewController {
     */
 
     @IBAction func recalculateButton(_ sender: UIButton) {
+        //go back to other screen
+        self.dismiss(animated: true, completion: nil)
+        
         
         
     }

@@ -11,6 +11,7 @@ import UIKit
 class SecondViewController : UIViewController {
     
     //create another screen with code
+    //for learning purposes: 
     
     var zodiacSign = "string"
     
