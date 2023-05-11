@@ -13,8 +13,12 @@ class ResultViewController: UIViewController {
    
     @IBOutlet weak var resultText: UILabel!
     
+    var zodiacSign: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        resultLabel.text = zodiacSign
 
         // Do any additional setup after loading the view.
     }

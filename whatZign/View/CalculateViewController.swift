@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class CalculateViewController: UIViewController {
     
     
     @IBOutlet weak var signLabel: UILabel!
@@ -15,6 +15,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var calculateButton: UIButton!
     
     @IBOutlet weak var datePicker: UIDatePicker!
+    
+    var sign = "string"
     
 
     override func viewDidLoad() {
@@ -43,8 +45,6 @@ class ViewController: UIViewController {
         let components = datePicker.calendar.dateComponents([.month, .day], from: datePicker.date)
         let month = components.month
         let day = components.day
-        
-        let sign : String
         
         //Date Ranges:
         let capRange1 = 22...31
@@ -121,10 +121,16 @@ class ViewController: UIViewController {
 //        }
         
         //show second view controller:
-        let secondVC = SecondViewController()
-        secondVC.zodiacSign = sign
-        self.present(secondVC, animated: true, completion: nil)
+        self.performSegue(withIdentifier: "goToResult", sender: self)
         
+    }
+    
+    //for multiple screens:
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToResult" {
+            let destinationVC = segue.destination as! ResultViewController
+            destinationVC.zodiacSign = sign
+        }
     }
     
 }
