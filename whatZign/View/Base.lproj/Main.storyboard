@@ -56,16 +56,16 @@
             </objects>
             <point key="canvasLocation" x="-486.15384615384613" y="3.5545023696682461"/>
         </scene>
-        <!--View Controller-->
+        <!--Result View Controller-->
         <scene sceneID="z6t-On-yGA">
             <objects>
-                <viewController id="n1M-ZC-BqV" customClass="ViewController" customModule="whatZign" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="n1M-ZC-BqV" customClass="ResultViewController" customModule="whatZign" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hs6-Jm-cIs">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Result" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hfI-kI-4bg">
-                                <rect key="frame" x="174" y="365" width="48" height="21"/>
+                                <rect key="frame" x="174" y="365" width="48" height="13"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -84,6 +84,9 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="RECALCULATE"/>
+                                <connections>
+                                    <action selector="recalculateButton:" destination="n1M-ZC-BqV" eventType="touchUpInside" id="ZFf-lJ-bUF"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You are a" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M8B-A4-dGX">
                                 <rect key="frame" x="121" y="290" width="148" height="46"/>
@@ -96,10 +99,14 @@
                         <viewLayoutGuide key="safeArea" id="hoR-U5-hOq"/>
                         <color key="backgroundColor" systemColor="systemCyanColor"/>
                     </view>
+                    <connections>
+                        <outlet property="resultLabel" destination="hfI-kI-4bg" id="jiG-AE-yWS"/>
+                        <outlet property="resultText" destination="i0D-vC-Vlc" id="m2L-d5-FSw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yWI-IB-t7L" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="289" y="4"/>
+            <point key="canvasLocation" x="287.69230769230768" y="3.5545023696682461"/>
         </scene>
     </scenes>
     <resources>

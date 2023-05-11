@@ -16,14 +16,11 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var datePicker: UIDatePicker!
     
-    
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-    
     
 
     @IBAction func datePicked(_ sender: UIDatePicker) {
@@ -72,6 +69,7 @@ class ViewController: UIViewController {
         let libRange2 = 1...23
         let scrRange1 = 24...31
         let scrRange2 = 1...21
+        //do not need the last ranges.
         
         
         //refactor this if possible...
@@ -122,15 +120,10 @@ class ViewController: UIViewController {
 //            return sign
 //        }
         
-        
-        
- 
-        
-        
-        
-        
-       
-       
+        //show second view controller:
+        let secondVC = SecondViewController()
+        secondVC.zodiacSign = sign
+        self.present(secondVC, animated: true, completion: nil)
         
     }
     
