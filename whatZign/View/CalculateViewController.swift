@@ -16,7 +16,7 @@ class CalculateViewController: UIViewController {
     
     @IBOutlet weak var datePicker: UIDatePicker!
     
-    var zodiacObj = SignBrain()
+    var zodiacObject = SignBrain()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,10 +33,11 @@ class CalculateViewController: UIViewController {
         
         //This will extract the data needed from the date picker:
         let components = datePicker.calendar.dateComponents([.month, .day], from: datePicker.date)
-        let month = components.month
-        let day = components.day
+        let month = components.month ?? 0
+        let day = components.day ?? 0
         
-        zodiacObj.calculateSign(month: month, day: day)
+        //these values are optionals;
+        zodiacObject.calculateSign(month: month, day: day)
        
         
         //show second view controller:
@@ -48,7 +49,9 @@ class CalculateViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goToResult" {
             let destinationVC = segue.destination as! ResultViewController //where it gets value
-            destinationVC.zodiacSign = zodiacObj.getSign()
+            destinationVC.zodiacSign = zodiacObject.getSign()
+            destinationVC.results = zodiacObject.getResults()
+            destinationVC.signImage = zodiacObject.getImage()
         }
     }
     

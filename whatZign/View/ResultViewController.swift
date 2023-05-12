@@ -13,12 +13,20 @@ class ResultViewController: UIViewController {
    
     @IBOutlet weak var resultText: UILabel!
     
+    @IBOutlet weak var zodiacImage: UIImageView!
+   
     var zodiacSign: String?
+    var signImage: UIImage?
+    var results: String?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         resultLabel.text = zodiacSign
+        zodiacImage.image = signImage
+        resultText.text = results
+        
 
         // Do any additional setup after loading the view.
     }
