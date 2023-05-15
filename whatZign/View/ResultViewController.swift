@@ -14,6 +14,16 @@ class ResultViewController: UIViewController {
     @IBOutlet weak var resultText: UILabel!
     
     @IBOutlet weak var zodiacImage: UIImageView!
+    
+    @IBOutlet weak var recalculateButton: UIButton!{
+            didSet{
+                recalculateButton.backgroundColor = .clear
+                recalculateButton.layer.cornerRadius = 10
+                recalculateButton.layer.borderWidth = 2
+                recalculateButton.layer.borderColor = UIColor.white.cgColor
+            }
+    }
+    
    
     var zodiacSign: String?
     var signImage: UIImage?
@@ -30,17 +40,6 @@ class ResultViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
     @IBAction func recalculateButton(_ sender: UIButton) {
         //go back to other screen

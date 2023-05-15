@@ -12,7 +12,14 @@ class CalculateViewController: UIViewController {
     
     @IBOutlet weak var signLabel: UILabel!
     
-    @IBOutlet weak var calculateButton: UIButton!
+    @IBOutlet weak var calculateButton: UIButton!{
+        didSet{
+            calculateButton.backgroundColor = .clear
+            calculateButton.layer.cornerRadius = 10
+            calculateButton.layer.borderWidth = 4
+            calculateButton.layer.borderColor = UIColor.white.cgColor
+        }
+    }
     
     @IBOutlet weak var datePicker: UIDatePicker!
     
